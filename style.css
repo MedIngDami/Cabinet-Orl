@@ -1,391 +1,627 @@
-/* --- Reset si Setari de Baza --- */
+/* ===== RESET ȘI VARIABILE ===== */
+:root {
+    --primary-blue: #1a5276;
+    --secondary-blue: #5499c7;
+    --accent-red: #e74c3c;
+    --accent-green: #2ecc71;
+    --light-blue: #f0f7ff;
+    --light-gray: #f8f9fa;
+    --medium-gray: #e9ecef;
+    --dark-gray: #6c757d;
+    --white: #ffffff;
+    --black: #333333;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.12);
+    --transition: all 0.3s ease;
+    --border-radius: 12px;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
+    color: var(--black);
+    background-color: var(--white);
+    overflow-x: hidden;
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px;
 }
 
-/* --- Antet (Header) --- */
+/* ===== HEADER MODERN ===== */
 header {
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background-color: var(--white);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
+    padding: 15px 0;
 }
 
-header .container {
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
 }
 
 .logo h1 {
-    color: #1a5276; /* Albastru inchis, profesional */
-    font-size: 1.8rem;
+    color: var(--primary-blue);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .logo span {
-    color: #5499c7; /* Albastru deschis, accent */
+    color: var(--secondary-blue);
 }
 
 .logo p {
+    color: var(--dark-gray);
     font-size: 0.9rem;
-    color: #666;
+    margin-top: 4px;
     font-style: italic;
 }
 
-nav a {
-    margin-left: 25px;
+.main-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: var(--black);
     text-decoration: none;
-    color: #333;
     font-weight: 500;
-    transition: color 0.3s;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: var(--transition);
 }
 
-nav a:hover {
-    color: #1a5276;
-    text-decoration: underline;
+.nav-link:hover {
+    color: var(--primary-blue);
+    background-color: var(--light-blue);
+    transform: translateY(-2px);
 }
 
-/* --- Sectiunea Hero --- */
+.nav-link i {
+    font-size: 1.1rem;
+}
+
+/* ===== HERO SECTION ===== */
 .hero {
-    background: linear-gradient(to right, rgba(26, 82, 118, 0.85), rgba(84, 153, 199, 0.8)), url('https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background: linear-gradient(135deg, 
+        rgba(26, 82, 118, 0.9) 0%, 
+        rgba(84, 153, 199, 0.85) 100%),
+        url('https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
     background-size: cover;
     background-position: center;
-    color: white;
+    background-attachment: fixed;
+    color: var(--white);
+    padding: 120px 0;
     text-align: center;
-    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 700;
     margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.hero p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto 30px;
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+    line-height: 1.6;
 }
 
-.btn {
-    display: inline-block;
-    background-color: #e74c3c; /* Rosu de accent, pentru butoane */
-    color: white;
-    padding: 12px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--white);
+    color: var(--primary-blue);
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-weight: 600;
     font-size: 1.1rem;
-    transition: background-color 0.3s;
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.btn:hover {
-    background-color: #c0392b;
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    background-color: var(--light-blue);
 }
 
-/* --- Sectiunea Servicii --- */
-.servicii {
-    padding: 80px 20px;
-    background-color: white;
+.hero-btn i {
+    font-size: 1.2rem;
 }
 
-.servicii h2, .medici h2, .contact h2 {
+/* ===== SECTION HEADER STYLES ===== */
+.section-header {
     text-align: center;
-    color: #1a5276;
-    margin-bottom: 50px;
-    font-size: 2.2rem;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    color: var(--primary-blue);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--secondary-blue);
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    color: var(--dark-gray);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ===== SERVICII MODERN ===== */
+.servicii {
+    padding: 100px 0;
+    background-color: var(--light-blue);
 }
 
 .servicii-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
 .serviciu-card {
-    background: #f8f9fa;
-    padding: 30px;
-    border-radius: 10px;
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: var(--border-radius);
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--medium-gray);
+    position: relative;
+    overflow: hidden;
+}
+
+.serviciu-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-blue), var(--secondary-blue));
 }
 
 .serviciu-card:hover {
     transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
 }
 
-.serviciu-card i {
+.serviciu-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, var(--light-blue), var(--white));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--secondary-blue);
+}
+
+.serviciu-icon i {
     font-size: 2.5rem;
-    color: #5499c7;
-    margin-bottom: 20px;
+    color: var(--primary-blue);
 }
 
 .serviciu-card h3 {
-    color: #1a5276;
+    color: var(--primary-blue);
+    font-size: 1.4rem;
     margin-bottom: 15px;
+    font-weight: 600;
 }
 
-/* --- Sectiunea Medici --- */
+.serviciu-card p {
+    color: var(--dark-gray);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* ===== MEDICI MODERN ===== */
 .medici {
-    padding: 80px 20px;
-    background-color: #f0f7ff;
+    padding: 100px 0;
+    background-color: var(--white);
 }
 
 .medici-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
 }
 
 .medic-card {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    border-left: 5px solid #5499c7;
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--medium-gray);
+}
+
+.medic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.medic-img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, var(--light-blue), var(--white));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--secondary-blue);
+}
+
+.medic-img i {
+    font-size: 3.5rem;
+    color: var(--primary-blue);
 }
 
 .medic-card h3 {
-    color: #1a5276;
+    color: var(--primary-blue);
+    font-size: 1.6rem;
     margin-bottom: 10px;
+    font-weight: 600;
 }
 
-.medic-card p {
-    margin-bottom: 8px;
+.medic-specialty {
+    color: var(--secondary-blue);
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    font-weight: 500;
 }
 
-/* ===== SECȚIUNEA DE CONTACT & PROGRAMARE ===== */
+.medic-details {
+    text-align: left;
+    padding-top: 20px;
+    border-top: 1px solid var(--medium-gray);
+}
+
+.medic-details p {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--dark-gray);
+    font-size: 0.95rem;
+}
+
+.medic-details i {
+    color: var(--secondary-blue);
+    min-width: 20px;
+    margin-top: 3px;
+}
+
+/* ===== TESTIMONIALE MODERN ===== */
+.testimoniale {
+    padding: 100px 0;
+    background-color: var(--light-blue);
+}
+
+.testimoniale-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--medium-gray);
+    position: relative;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.quote-icon {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 2.5rem;
+    color: var(--secondary-blue);
+    opacity: 0.3;
+}
+
+.testimonial-content {
+    padding-left: 40px;
+    margin-bottom: 30px;
+}
+
+.testimonial-text {
+    color: var(--black);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+.testimonial-author {
+    padding-top: 20px;
+    border-top: 1px solid var(--medium-gray);
+    text-align: center;
+}
+
+.author-name {
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.author-details {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+}
+
+/* ===== GALERIE MODERN ===== */
+.galerie {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.galerie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.galerie-item {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    height: 300px;
+}
+
+.galerie-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.galerie-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.galerie-item:hover img {
+    transform: scale(1.05);
+}
+
+.galerie-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: var(--white);
+    padding: 20px;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* ===== CONTACT & FORMULAR MODERN ===== */
+.contact {
+    padding: 100px 0;
+    background-color: var(--light-blue);
+}
 
 .contact-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 50px;
     margin-bottom: 60px;
 }
 
-@media (max-width: 768px) {
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-    }
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
-/* Informații de contact */
-.contact-info h3 {
-    color: #1a5276;
-    margin-top: 25px;
-    margin-bottom: 10px;
-    font-size: 1.3rem;
+.contact-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--medium-gray);
+}
+
+.contact-card:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
-.contact-info h3:first-child {
-    margin-top: 0;
+.contact-icon i {
+    color: var(--white);
+    font-size: 1.5rem;
 }
 
-.contact-info p {
-    margin-bottom: 5px;
-    padding-left: 30px;
+.contact-content h3 {
+    color: var(--primary-blue);
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.contact-content p {
+    color: var(--dark-gray);
+    line-height: 1.6;
 }
 
 .phone-number {
+    color: var(--accent-red) !important;
     font-size: 1.4rem;
-    font-weight: bold;
-    color: #e74c3c;
-    margin: 10px 0;
+    font-weight: 700;
+    margin: 8px 0 !important;
 }
 
 .phone-cta {
     font-style: italic;
-    color: #666;
-    margin-bottom: 20px !important;
+    color: var(--dark-gray);
+    font-size: 0.9rem;
 }
 
-/* Formular de programare */
-.contact-form {
-    background: #f8f9fa;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+/* ===== FORMULAR MODERN ===== */
+.contact-form-wrapper {
+    background: var(--white);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--medium-gray);
 }
 
-.contact-form h3 {
-    color: #1a5276;
+.form-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-header h3 {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
     margin-bottom: 10px;
-}
-
-.contact-form > p {
-    margin-bottom: 25px;
-    color: #666;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #333;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: border 0.3s;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #5499c7;
-    box-shadow: 0 0 0 3px rgba(84, 153, 199, 0.1);
-}
-
-.submit-btn {
-    background-color: #2ecc71; /* Verde pentru acțiune pozitivă */
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    width: 100%;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: background-color 0.3s;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 
-.submit-btn:hover {
-    background-color: #27ae60;
+.form-header p {
+    color: var(--dark-gray);
+    font-size: 0.95rem;
 }
 
-.form-note {
-    font-size: 0.9rem;
-    color: #777;
-    margin-top: 15px;
-    text-align: center;
+.modern-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
-/* Secțiunea hărții */
-.map-section {
-    margin-top: 60px;
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
-.map-section h3 {
-    text-align: center;
-    color: #1a5276;
-    margin-bottom: 25px;
+.form-group {
+    margin-bottom: 0;
 }
 
-.map-container {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--primary-blue);
+    font-size: 0.95rem;
 }
 
-/* Mesaj de succes/eroare (ascuns inițial) */
-.form-message {
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 20px;
-    text-align: center;
-    display: none;
+.form-group label i {
+    color: var(--secondary-blue);
 }
 
-.form-success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
+.form-group input,
+.modern-select,
+.modern-textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid var(--medium-gray);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: var(--transition);
+    background-color: var(--white);
+    color: var(--black);
 }
 
-.form-error {
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-}
-/* --- Subsol (Footer) --- */
-footer {
-    background-color: #1a5276;
-    color: white;
-    text-align: center;
-    padding: 25px 20px;
-    margin-top: 40px;
+.form-group input:focus,
+.modern-select:focus,
+.modern-textarea:focus {
+    outline: none;
+    border-color: var(--secondary-blue);
+    box-shadow: 0 0 0 3px rgba(84, 153, 199, 0.1);
 }
 
-/* Pentru tablete */
-@media (max-width: 768px) {
-    .servicii-grid, .medici-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    
-    .hero h2 {
-        font-size: 2rem;
-    }
-}
-
-/* Pentru telefoane */
-@media (max-width: 480px) {
-    .servicii-grid, .medici-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    header .container {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    nav a {
-        margin: 5px;
-        display: inline-block;
-    }
-    
-    .hero {
-        padding: 60px 20px;
-    }
-    
-    .hero h2 {
-        font-size: 1.8rem;
-    }
-    
-    .btn {
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
-}
+.modern-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a5276' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'
