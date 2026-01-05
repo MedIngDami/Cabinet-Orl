@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VN13WXZZ2B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VN13WXZZ2B');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cabinet Medical ORL | Diagnostic și Tratament Specializat</title>
@@ -85,18 +94,125 @@
         </div>
     </section>
 
-    <!-- Sectiunea Contact -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contactează-ne pentru o programare</h2>
-            <div class="contact-info">
-                <p><i class="fas fa-phone"></i> <strong>Telefon:</strong> +40 741 021 801</p>
-                <p><i class="fas fa-map-marker-alt"></i> <strong>Adresă:</strong> Str. Erou Iancu Nicolae 41, Voluntari</p>
-                <p><i class="fas fa-clock"></i> <strong>Program:</strong> Luni - Vineri: 8:00 – 16:00</p>
-            </div>
-            <p class="contact-cta">Sună acum sau completează formularul de pe site-ul nostru original pentru o programare rapidă.</p>
+ <!-- Sectiunea Testimoniale -->
+<section class="testimoniale">
+    <div class="container">
+        <h2>Pacienții noștri spun</h2>
+        <div class="testimonial">
+            <p>"Am rezolvat problema de sforăit în doar 2 vizite. Recomand cu încredere!"</p>
+            <span>- Maria P., 42 ani</span>
         </div>
-    </section>
+    </div>
+</section>
+
+ <!-- Sectiunea Galerie -->
+<section class="galerie">
+    <div class="container">
+        <h2>Cabinetul nostru</h2>
+        <div class="galerie-grid">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d" alt="Sala de așteptare">
+            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54" alt="Echipament medical">
+            <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136" alt="Consult ORL">
+        </div>
+    </div>
+</section>
+
+    <!-- Sectiunea Contact -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contactează-ne pentru o programare</h2>
+        
+        <div class="contact-wrapper">
+            <!-- Partea Stângă: Informații de contact -->
+            <div class="contact-info">
+                <h3><i class="fas fa-map-marker-alt"></i> Locație</h3>
+                <p><strong>Clinica ORL</strong><br>
+                Str. Erou Iancu Nicolae 41, Et. 3<br>
+                Voluntari, Ilfov</p>
+                
+                <h3><i class="fas fa-clock"></i> Program</h3>
+                <p><strong>Luni - Vineri:</strong> 8:00 – 16:00<br>
+                <strong>Sâmbătă - Duminică:</strong> Închis</p>
+                
+                <h3><i class="fas fa-phone"></i> Telefon</h3>
+                <p class="phone-number">+40 741 021 801</p>
+                <p class="phone-cta">Sună acum pentru o programare rapidă!</p>
+                
+                <h3><i class="fas fa-envelope"></i> Email</h3>
+                <p>contact@orl-clinica.ro</p>
+            </div>
+            
+            <!-- Partea Dreaptă: Formularul de programare -->
+            <div class="contact-form">
+                <h3>Programează-te online</h3>
+                <p>Completează formularul și te vom contacta în maxim 24h.</p>
+                
+                <form id="programare-form" action="https://formspree.io/f/xykzoqgj" method="POST">
+                
+                    <div class="form-group">
+                        <label for="nume">Numele complet *</label>
+                        <input type="text" id="nume" name="nume" placeholder="Ex: Popescu Maria" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefon">Număr de telefon *</label>
+                        <input type="tel" id="telefon" name="telefon" placeholder="Ex: 0722 123 456" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Adresa de email</label>
+                        <input type="email" id="email" name="email" placeholder="nume@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="serviciu">Serviciul dorit</label>
+                        <select id="serviciu" name="serviciu">
+                            <option value="">Alege un serviciu...</option>
+                            <option value="consultatie-adulti">Consult ORL adulți</option>
+                            <option value="consultatie-copii">Consult ORL copii</option>
+                            <option value="sforait-apnee">Tratament sforăit/apnee</option>
+                            <option value="endoscopie">Endoscopie nazală</option>
+                            <option value="audiometrie">Evaluare auz</option>
+                            <option value="altceva">Altceva</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="data">Data preferată (opțional)</label>
+                        <input type="date" id="data" name="data">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mesaj">Mesaj sau simptome</label>
+                        <textarea id="mesaj" name="mesaj" placeholder="Descrieți simptomele sau întrebările dumneavoastră..." rows="4"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn submit-btn">
+                        <i class="fas fa-paper-plane"></i> Trimite cererea
+                    </button>
+                    
+                    <p class="form-note">* Câmpurile marcate cu asterisc sunt obligatorii.</p>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Hartă Google Maps -->
+        <div class="map-section">
+            <h3>Ne găsești aici</h3>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.123456789012!2d26.12345678901234!3d44.43210000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff123456789%3A0xabcdef1234567890!2sStr%20Erou%20Iancu%20Nicolae%2041%2C%20Voluntari!5e0!3m2!1sen!2sro!4v1234567890123"
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    title="Harta locației Clinicii ORL">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Subsolul site-ului (Footer) -->
     <footer>
