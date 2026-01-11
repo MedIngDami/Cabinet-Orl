@@ -1,0 +1,413 @@
+/* ===== STILURI NOI PENTRU SENSIA ===== */
+
+/* Hero buttons */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.hero-btn.secondary {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+.hero-btn.secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Departamente Section */
+.departamente {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.departamente-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.departament-card {
+    background: var(--light-blue);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid var(--medium-gray);
+    position: relative;
+    overflow: hidden;
+}
+
+.departament-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.departament-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.departament-icon i {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.departament-card h3 {
+    color: var(--primary-blue);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.departament-desc {
+    color: var(--dark-gray);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.departament-servicii {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.departament-servicii li {
+    margin-bottom: 8px;
+    color: var(--black);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.departament-servicii i {
+    color: var(--accent-green);
+    font-size: 0.9rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+/* Preturi Section */
+.preturi {
+    padding: 100px 0;
+    background-color: var(--light-blue);
+}
+
+.preturi-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 40px 0 30px;
+}
+
+.tab-btn {
+    padding: 12px 24px;
+    background: var(--white);
+    border: 2px solid var(--medium-gray);
+    border-radius: 30px;
+    font-weight: 600;
+    color: var(--primary-blue);
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.95rem;
+}
+
+.tab-btn:hover {
+    background-color: var(--light-blue);
+    border-color: var(--secondary-blue);
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    color: var(--white);
+    border-color: var(--primary-blue);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.preturi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.pret-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--medium-gray);
+}
+
+.pret-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--light-blue);
+    font-size: 1.3rem;
+}
+
+.pret-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--medium-gray);
+}
+
+.pret-details:last-child {
+    border-bottom: none;
+}
+
+.pret-details p {
+    color: var(--black);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.pret {
+    color: var(--accent-red);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.pret-range {
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.pret-benefit {
+    color: var(--accent-green);
+    font-weight: 600;
+    font-style: italic;
+}
+
+.modalitati-plata {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-top: 50px;
+    text-align: center;
+}
+
+.modalitati-plata h3 {
+    color: var(--primary-blue);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.plata-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.plata-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background: var(--light-blue);
+    border-radius: 10px;
+    min-width: 120px;
+    transition: var(--transition);
+}
+
+.plata-option:hover {
+    transform: translateY(-5px);
+    background: var(--white);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.plata-option i {
+    font-size: 1.5rem;
+    color: var(--secondary-blue);
+}
+
+.plata-option span {
+    font-size: 0.9rem;
+    color: var(--black);
+    font-weight: 500;
+}
+
+.plata-note {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.plata-note i {
+    color: var(--secondary-blue);
+}
+
+/* Flux pacient */
+.flux-pacient {
+    background: var(--white);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.flux-pacient::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    right: 50px;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary-blue), var(--secondary-blue));
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .flux-pacient::before {
+        display: none;
+    }
+}
+
+.flux-step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+    background: var(--white);
+    padding: 10px;
+}
+
+.flux-step:last-child {
+    margin-bottom: 0;
+}
+
+.flux-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-right: 30px;
+    box-shadow: 0 5px 15px rgba(26, 82, 118, 0.3);
+}
+
+.flux-content h3 {
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.flux-content p {
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    .preturi-tabs {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .flux-step {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .flux-number {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .plata-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .plata-option {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+/* Adaugă în footer */
+.footer-services {
+    /* Actualizează serviciile în footer */
+    list-style: none;
+    padding: 0;
+}
+
+.footer-services li {
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+/* Stiluri pentru JavaScript tabs */
+.tab-content {
+    animation: fadeIn 0.3s ease;
+}
