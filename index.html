@@ -21,25 +21,29 @@
 
     <!-- Antetul site-ului (Header) -->
     <header>
-        <div class="container header-container">
-            <div class="logo">
-                <h1>Clinic<span>ORL</span></h1>
-                <p>Diagnosticul corect. Tratamentul potrivit.</p>
+    <div class="container header-container">
+        <div class="logo">
+            <img src="logo.png" alt="ClinicORL Logo" class="logo-image">
+            <div class="logo-text">
+                <h1>Centrul de Excelență ORL<span>  SENSIA</span></h1> 
+                <p>Claritate în auz. Libertate în respirație.</p>
             </div>
-            <nav class="main-nav">
-                <a href="#acasa" class="nav-link"><i class="fas fa-home"></i> Acasă</a>
-                <a href="#servicii" class="nav-link"><i class="fas fa-stethoscope"></i> Servicii</a>
-                <a href="#medici" class="nav-link"><i class="fas fa-user-md"></i> Medici</a>
-                <a href="#contact" class="nav-link"><i class="fas fa-phone"></i> Contact</a>
-            </nav>
         </div>
-    </header>
+        <nav class="main-nav">
+            <a href="#acasa" class="nav-link"><i class="fas fa-home"></i> Acasă</a>
+            <a href="#servicii" class="nav-link"><i class="fas fa-stethoscope"></i> Servicii</a>
+            <a href="#preturi" class="nav-link"><i class="fas fa-tag"></i> Preturi</a>
+            <a href="#medici" class="nav-link"><i class="fas fa-user-md"></i> Medici</a>
+            <a href="#contact" class="nav-link"><i class="fas fa-phone"></i> Contact</a>
+        </nav>
+    </div>
+</header>
 
     <!-- Sectiunea Principala / Hero -->
     <section id="acasa" class="hero">
         <div class="container hero-container">
             <div class="hero-content">
-                <h2>Bine ați venit la Clinica ORL</h2>
+                <h2>Bine ați venit la SENSIA</h2>
                 <p class="hero-subtitle">De la nas înfundat la sforăit și otite — vă oferim soluții eficiente, cu diagnostic rapid și tratament personalizat pentru adulți și copii.</p>
                 <a href="#contact" class="btn hero-btn">
                     <i class="fas fa-calendar-check"></i> Programează-te acum
@@ -48,81 +52,466 @@
         </div>
     </section>
 
-    <!-- Sectiunea Servicii -->
-    <section id="servicii" class="servicii">
-        <div class="container">
-            <div class="section-header">
-                <h2>Serviciile noastre principale</h2>
-                <p class="section-subtitle">Îngrijire ORL de calitate pentru întreaga familie</p>
+    <section id="servicii" class="servicii-section">
+    <div class="container">
+        <h2 class="section-title">Servicii Specializate</h2>
+        <p class="section-subtitle">O abordare multidisciplinară pentru sănătatea dumneavoastră</p>
+        
+        <div class="servicii-grid">
+            <!-- Departamentul ORL Clinic -->
+            <div class="serviciu-card">
+                <div class="serviciu-icon">
+                    <i class="fas fa-lungs"></i>
+                </div>
+                <h3>Departamentul ORL Clinic</h3>
+                <p class="serviciu-locatie">🔬 2 cabinete de consultații</p>
+                <ul class="serviciu-lista">
+                    <li><strong>Video-Endoscopie ORL</strong> - Standardul de aur în diagnostic</li>
+                    <li>Patologie acută și cronică (otite, sinuzite, alergii)</li>
+                    <li>Toaleta auriculară și nazală (aspirații, spălături)</li>
+                    <li>Tratamente locale (aerosoli, insuflații)</li>
+                </ul>
             </div>
-            <div class="servicii-grid">
-                <div class="serviciu-card">
-                    <div class="serviciu-icon">
-                        <i class="fas fa-stethoscope"></i>
-                    </div>
-                    <h3>Consultații ORL</h3>
-                    <p>Consultatii complete pentru adulți și copii, cu evaluare detaliată și plan de tratament personalizat.</p>
+            
+            <!-- Audiologie și Protezare Auditivă -->
+            <div class="serviciu-card">
+                <div class="serviciu-icon">
+                    <i class="fas fa-assistive-listening-systems"></i>
                 </div>
-                <div class="serviciu-card">
-                    <div class="serviciu-icon">
-                        <i class="fas fa-bed"></i>
-                    </div>
-                    <h3>Tratament Sforăit & Apnee</h3>
-                    <p>Soluții moderne pentru somn liniștit, inclusiv evaluare polisomnografică și CPAP.</p>
+                <h3>Audiologie și Protezare Auditivă</h3>
+                <p class="serviciu-locatie">🎧 Cabinet izolat fonic</p>
+                <ul class="serviciu-lista">
+                    <li><strong>Audiometrie tonală și vocală</strong></li>
+                    <li>Timpanometrie pentru urechea medie</li>
+                    <li>Consiliere și protezare auditivă</li>
+                    <li>Reglaj fin aparate auditive (producători de top)</li>
+                </ul>
+            </div>
+            
+            <!-- Neuro-Otologie -->
+            <div class="serviciu-card">
+                <div class="serviciu-icon">
+                    <i class="fas fa-brain"></i>
                 </div>
-                <div class="serviciu-card">
-                    <div class="serviciu-icon">
-                        <i class="fas fa-ear-listen"></i>
-                    </div>
-                    <h3>Vertij și Auz</h3>
-                    <p>Evaluare și tratament specializat pentru tulburări vestibulare și pierderea auzului.</p>
+                <h3>Neuro-Otologie</h3>
+                <p class="serviciu-subtitle">Abordare ORL + Neurologie</p>
+                <ul class="serviciu-lista">
+                    <li>Diagnostic amețeli și tulburări de echilibru</li>
+                    <li>Evaluare cefalee și migrene</li>
+                    <li>Colaborare medic ORL + Neurolog</li>
+                    <li>Excludere cauze grave (AVC, tumori)</li>
+                </ul>
+            </div>
+            
+            <!-- Chirurgie Ambulatorie -->
+            <div class="serviciu-card">
+                <div class="serviciu-icon">
+                    <i class="fas fa-syringe"></i>
                 </div>
-                <div class="serviciu-card">
-                    <div class="serviciu-icon">
-                        <i class="fas fa-head-side-cough"></i>
-                    </div>
-                    <h3>Sinuzită & Amigdalită</h3>
-                    <p>Tratament pentru afecțiuni acute și cronice, cu abordare minim invazivă.</p>
+                <h3>Chirurgie Ambulatorie</h3>
+                <p class="serviciu-locatie">🏥 Sala de mici intervenții</p>
+                <ul class="serviciu-lista">
+                    <li>Radiofrecvență pentru cornete nazale</li>
+                    <li>Biopsii pentru examen histopatologic</li>
+                    <li>Incizii și drenaje (abcese)</li>
+                    <li>Frenotomii linguale și cauterizări</li>
+                </ul>
+            </div>
+            
+            <!-- Logopedie și Reabilitare Vocală -->
+            <div class="serviciu-card">
+                <div class="serviciu-icon">
+                    <i class="fas fa-comment-medical"></i>
+                </div>
+                <h3>Logopedie și Reabilitare Vocală</h3>
+                <ul class="serviciu-lista">
+                    <li>Terapie tulburări de limbaj (copii și adulți)</li>
+                    <li>Reabilitare post-AVC sau post-chirurgie</li>
+                    <li>Tratament disfonie și noduli vocali</li>
+                    <li>Colaborare cu logoped specializat</li>
+                </ul>
+            </div>
+            
+            <!-- Abordare Multidisciplinară -->
+            <div class="serviciu-card card-special">
+                <div class="serviciu-icon">
+                    <i class="fas fa-users-medical"></i>
+                </div>
+                <h3>Abordare Multidisciplinară</h3>
+                <p class="serviciu-desc">
+                    La Sensia, oferim o vizibilitate completă asupra sănătății dumneavoastră prin colaborarea a specialiștilor din:
+                </p>
+                <div class="specialitati">
+                    <span class="specialitate">ORL</span>
+                    <span class="specialitate">Neurologie</span>
+                    <span class="specialitate">Audiologie</span>
+                    <span class="specialitate">Logopedie</span>
+                </div>
+                <p class="serviciu-beneficiu">
+                    <i class="fas fa-check-circle"></i> Diagnostic integrat
+                    <i class="fas fa-check-circle"></i> Tratament personalizat
+                    <i class="fas fa-check-circle"></i> Continuare și monitorizare
+                </p>
+            </div>
+        </div>
+        
+       </div>
+</section>
+
+<section id="preturi" class="preturi-section">
+    <div class="container">
+        <h2 class="section-title">Politica de Prețuri</h2>
+        <p class="section-subtitle">Transparență și opțiuni flexibile de plată</p>
+        
+        <div class="strategie-preturi">
+            <div class="strategie-card">
+                <div class="strategie-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <h3>Strategie Premium</h3>
+                <p>Prețuri competitive pentru intervenții specializate cu calitate superioară</p>
+                <div class="strategie-highlight">
+                    <span>Calitate premium la prețuri accesibile</span>
+                </div>
+            </div>
+            
+            <div class="modalitati-plata">
+                <h4><i class="fas fa-credit-card"></i> Modalități de plată</h4>
+                <div class="plata-options">
+                    <span class="plata-option"><i class="fas fa-money-bill-wave"></i> Numerar</span>
+                    <span class="plata-option"><i class="fas fa-credit-card"></i> Card (POS)</span>
+                    <span class="plata-option"><i class="fas fa-file-invoice"></i> Rate (2 rate)</span>
+                    <span class="plata-option"><i class="fas fa-building"></i> Abonamente firme</span>
+                    <span class="plata-option"><i class="fas fa-shield-alt"></i> CAS</span>
                 </div>
             </div>
         </div>
-    </section>
+
+        <div class="preturi-grid">
+            <!-- Departamentul ORL Clinic -->
+            <div class="departament-card">
+                <div class="departament-header">
+                    <h3><i class="fas fa-lungs"></i> Departamentul ORL Clinic</h3>
+                    <span class="departament-tag">Core Business</span>
+                </div>
+                
+                <div class="serviciu-pret">
+                    <div class="serviciu-info">
+                        <h4>Video-Endoscopie ORL</h4>
+                        <p class="serviciu-desc">Nazo-Faringo-Laringoscopie</p>
+                    </div>
+                    <div class="pret-compare">
+                        <span class="pret-our">150 RON</span>
+                        <span class="pret-market">pieță: 150-350 RON</span>
+                    </div>
+                </div>
+                
+                <div class="serviciu-pret">
+                    <div class="serviciu-info">
+                        <h4>Endoscopie Laringiană</h4>
+                    </div>
+                    <div class="pret-compare">
+                        <span class="pret-our">100 RON</span>
+                        <span class="pret-market">preț standard</span>
+                    </div>
+                </div>
+                
+                <div class="serviciu-pret">
+                    <div class="serviciu-info">
+                        <h4>Endoscopie Otică</h4>
+                    </div>
+                    <div class="pret-compare">
+                        <span class="pret-our">150 RON</span>
+                        <span class="pret-market">pieță: 100-350 RON</span>
+                    </div>
+                </div>
+                
+                <div class="serviciu-pret">
+                    <div class="serviciu-info">
+                        <h4>Toaleta Auriculară și Nazală</h4>
+                    </div>
+                    <div class="pret-details">
+                        <div class="pret-item">
+                            <span>Aspirații</span>
+                            <span class="pret-value">30 RON</span>
+                        </div>
+                        <div class="pret-item">
+                            <span>Spălături auriculare</span>
+                            <span class="pret-value">50 RON</span>
+                        </div>
+                        <div class="pret-item">
+                            <span>Aerosoli</span>
+                            <span class="pret-value">50 RON</span>
+                        </div>
+                        <div class="pret-item">
+                            <span>Tamponament nazal</span>
+                            <span class="pret-value">50 RON</span>
+                        </div>
+                        <div class="pret-item">
+                            <span>Extracție corp străin</span>
+                            <span class="pret-value">150 RON</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Audiologie -->
+            <div class="departament-card">
+                <div class="departament-header">
+                    <h3><i class="fas fa-assistive-listening-systems"></i> Audiologie și Protezare</h3>
+                    <span class="departament-tag">Cabinet izolat fonic</span>
+                </div>
+                
+                <div class="serviciu-pret">
+                    <div class="serviciu-info">
+                        <h4>Diagnostic Funcțional</h4>
+                    </div>
+                    <div class="pret-details">
+                        <div class="pret-item">
+                            <span>Audiometrie tonală și vocală</span>
+                            <span class="pret-value">70 RON</span>
+                        </div>
+                        <div class="pret-item">
+                            <span>Timpanometrie</span>
+                            <span class="pret-value">90 RON</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="serviciu-pret">
+                    <div class="serviciu-info">
+                        <h4>Reabilitare Auditivă</h4>
+                        <p class="serviciu-desc">Consiliere protezare</p>
+                    </div>
+                    <div class="pret-compare">
+                        <span class="pret-our">200 RON</span>
+                        <span class="pret-market">pieță: 150-300 RON</span>
+                    </div>
+                </div>
+                
+                <div class="serviciu-pret highlight">
+                    <div class="serviciu-info">
+                        <h4>Aparate Auditive</h4>
+                        <p class="serviciu-desc">Producători de top</p>
+                    </div>
+                    <div class="pret-range">
+                        <span class="pret-from">de la 2.000 RON</span>
+                        <span class="pret-to">până la 9.000 RON</span>
+                    </div>
+                    <p class="pret-note">*Preț în funcție de cerințe și buget</p>
+                </div>
+            </div>
+
+            <!-- Neuro-Otologie -->
+            <div class="departament-card">
+                <div class="departament-header">
+                    <h3><i class="fas fa-brain"></i> Neuro-Otologie</h3>
+                    <span class="departament-tag">ORL + Neurologie</span>
+                </div>
+                
+                <div class="serviciu-pret">
+                    <div class="serviciu-info">
+                        <h4>Consultație Neurologie</h4>
+                    </div>
+                    <div class="pret-compare">
+                        <span class="pret-our">300 RON</span>
+                    </div>
+                </div>
+                
+                <div class="serviciu-pret">
+                    <div class="serviciu-info">
+                        <h4>Investigare Vertij</h4>
+                        <p class="serviciu-desc">Evaluare completă</p>
+                    </div>
+                    <div class="pret-compare">
+                        <span class="pret-our">250 RON</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chirurgie Ambulatorie -->
+            <div class="departament-card">
+                <div class="departament-header">
+                    <h3><i class="fas fa-syringe"></i> Chirurgie Ambulatorie</h3>
+                    <span class="departament-tag">Sala intervenții</span>
+                </div>
+                
+                <div class="serviciu-pret highlight">
+                    <div class="serviciu-info">
+                        <h4>Radiofrecvență Cornete Nazale</h4>
+                        <p class="serviciu-desc">Tratament modern fără dureri</p>
+                    </div>
+                    <div class="pret-compare">
+                        <span class="pret-our">3.000 RON</span>
+                    </div>
+                </div>
+                
+                <div class="pret-details">
+                    <div class="pret-item">
+                        <span>Biopsii</span>
+                        <span class="pret-value">100 RON</span>
+                    </div>
+                    <div class="pret-item">
+                        <span>Incizii și Drenaje</span>
+                        <span class="pret-value">100 RON</span>
+                    </div>
+                    <div class="pret-item">
+                        <span>Cauterizare Pată Vasculară</span>
+                        <span class="pret-value">200 RON</span>
+                    </div>
+                    <div class="pret-item">
+                        <span>Cauterizări complexe</span>
+                        <span class="pret-value">200-700 RON</span>
+                    </div>
+                    <div class="pret-item">
+                        <span>Frenotomii Linguale</span>
+                        <span class="pret-value">300 RON</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logopedie -->
+            <div class="departament-card">
+                <div class="departament-header">
+                    <h3><i class="fas fa-comment-medical"></i> Logopedie</h3>
+                    <span class="departament-tag">Reabilitare vocală</span>
+                </div>
+                
+                <div class="serviciu-pret">
+                    <div class="serviciu-info">
+                        <h4>Terapie Tulburări Limbaj</h4>
+                        <p class="serviciu-desc">50 minute / ședință</p>
+                    </div>
+                    <div class="pret-compare">
+                        <span class="pret-our">175 RON</span>
+                        <span class="pret-package">Pachete avantajoase</span>
+                    </div>
+                </div>
+                
+                <div class="serviciu-pret">
+                    <div class="serviciu-info">
+                        <h4>Terapie Vocală</h4>
+                        <p class="serviciu-desc">Recuperare voce</p>
+                    </div>
+                    <div class="pret-compare">
+                        <span class="pret-our">350 RON</span>
+                        <span class="pret-package">Pachete multiple</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CAS -->
+            <div class="departament-card card-cas">
+                <div class="departament-header">
+                    <h3><i class="fas fa-shield-alt"></i> Contract CAS</h3>
+                    <span class="departament-tag tag-cas">Disponibil</span>
+                </div>
+                
+                <div class="cas-content">
+                    <div class="cas-info">
+                        <i class="fas fa-handshake"></i>
+                        <p>Funcționăm atât în regim privat, cât și prin contract cu CAS</p>
+                    </div>
+                    
+                    <div class="beneficii-cas">
+                        <h4>Beneficii pentru pacienți:</h4>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Acces la servicii specializate</li>
+                            <li><i class="fas fa-check-circle"></i> Reduceri pentru asigurați</li>
+                            <li><i class="fas fa-check-circle"></i> Proceduri acoperite CAS</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cas-nota">
+                        <p><i class="fas fa-info-circle"></i> Pentru detalii despre acoperire CAS, contactați-ne</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notă informativă -->
+        <div class="preturi-nota">
+            <div class="nota-icon">
+                <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <div class="nota-content">
+                <h4>Informații importante:</h4>
+                <p>Prețurile sunt orientative și pot varia în funcție de complexitatea cazului. Prețurile pentru clinici naționale (Sanador, Regina Maria) variază între 280-350 RON pentru intervenții similare. Oferim consultație prealabilă gratuită pentru estimarea costurilor exacte.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Sectiunea Medici -->
     <section id="medici" class="medici">
-        <div class="container">
-            <div class="section-header">
-                <h2>Faceți cunoștință cu medicii noștri</h2>
-                <p class="section-subtitle">Specialiști cu experiență în domeniul ORL</p>
-            </div>
-            <div class="medici-grid">
-                <div class="medic-card">
-                    <div class="medic-img">
-                        <i class="fas fa-user-md"></i>
-                    </div>
-                    <h3>Dr. Uncu Marin</h3>
-                    <p class="medic-specialty">Medic Specialist ORL</p>
-                    <div class="medic-details">
-                        <p><i class="fas fa-graduation-cap"></i> <strong>Competențe:</strong> otologie, sindrom vertiginos, patologie rinosinusală</p>
-                        <p><i class="fas fa-briefcase"></i> <strong>Experiență:</strong> 8+ ani</p>
-                        <p><i class="fas fa-language"></i> <strong>Limbi:</strong> Română, Engleză, Rusă</p>
-                    </div>
+    <div class="container">
+        <div class="section-header">
+            <h2>Echipa noastră multidisciplinară</h2>
+            <p class="section-subtitle">Specialiști cu experiență în abordarea integrată ORL-Neurologie</p>
+        </div>
+        <div class="medici-grid">
+            <!-- Medic 1 -->
+            <div class="medic-card">
+                <div class="medic-img">
+                    <i class="fas fa-user-md"></i>
                 </div>
-                <div class="medic-card">
-                    <div class="medic-img">
-                        <i class="fas fa-user-md"></i>
-                    </div>
-                    <h3>Dr. Merças-Anghel Alina</h3>
-                    <p class="medic-specialty">Medic Specialist ORL</p>
-                    <div class="medic-details">
-                        <p><i class="fas fa-graduation-cap"></i> <strong>Competențe:</strong> ORL pediatric, boli infecto-contagioase</p>
-                        <p><i class="fas fa-briefcase"></i> <strong>Experiență:</strong> 8+ ani</p>
-                        <p><i class="fas fa-language"></i> <strong>Limbi:</strong> Română, Engleză, Germană</p>
-                    </div>
+                <h3>Dr. Uncu Marin</h3>
+                <p class="medic-specialty">Medic Specialist ORL</p>
+                <p class="medic-experience">Experiență: 8+ ani</p>
+                <div class="medic-details">
+                    <p><i class="fas fa-graduation-cap"></i> <strong>Competențe:</strong> Otologie, sindrom vertiginos, patologie rinosinusală</p>
+                    <p><i class="fas fa-procedures"></i> <strong>Intervenții:</strong> Video-endoscopie, chirurgie minim-invazivă</p>
+                    <p><i class="fas fa-language"></i> <strong>Limbi:</strong> Română, Engleză, Rusă</p>
+                </div>
+            </div>
+            
+            <!-- Medic 2 -->
+            <div class="medic-card">
+                <div class="medic-img">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <h3>Dr. Merças-Anghel Alina</h3>
+                <p class="medic-specialty">Medic Specialist ORL Pediatric</p>
+                <p class="medic-experience">Experiență: 8+ ani</p>
+                <div class="medic-details">
+                    <p><i class="fas fa-graduation-cap"></i> <strong>Competențe:</strong> ORL pediatric, boli infecto-contagioase</p>
+                    <p><i class="fas fa-procedures"></i> <strong>Intervenții:</strong> Amigdalectomii, proceduri pediatrice</p>
+                    <p><i class="fas fa-language"></i> <strong>Limbi:</strong> Română, Engleză, Germană</p>
+                </div>
+            </div>
+            
+            <!-- Medic 3 -->
+            <div class="medic-card">
+                <div class="medic-img">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <h3>Dr. Nicolae Munteanu</h3>
+                <p class="medic-specialty">Medic Primar ORL</p>
+                <p class="medic-experience">Experiență: 10+ ani</p>
+                <div class="medic-details">
+                    <p><i class="fas fa-graduation-cap"></i> <strong>Competențe:</strong> Chirurgie endoscopică, chirurgie laser</p>
+                    <p><i class="fas fa-procedures"></i> <strong>Intervenții:</strong> Rinologie avansată, chirurgie complexă</p>
+                    <p><i class="fas fa-language"></i> <strong>Limbi:</strong> Română, Spaniolă, Turcă</p>
+                </div>
+            </div>
+            
+            <!-- Medic 4 -->
+            <div class="medic-card">
+                <div class="medic-img">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <h3>Prof. Dr. Codruț Andrei</h3>
+                <p class="medic-specialty">Profesor Universitar, Medic Primar ORL</p>
+                <p class="medic-experience">Experiență: 25+ ani</p>
+                <div class="medic-details">
+                    <p><i class="fas fa-graduation-cap"></i> <strong>Competențe:</strong> Microchirurgie laringiană, fonochirurgie</p>
+                    <p><i class="fas fa-procedures"></i> <strong>Intervenții:</strong> Peste 14.000 de intervenții</p>
+                    <p><i class="fas fa-language"></i> <strong>Limbi:</strong> Română, Engleză, Chineză</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Sectiunea Testimoniale -->
     <section class="testimoniale">
@@ -177,7 +566,7 @@
                 
                 <!-- Slide 2 -->
                 <div class="slide fade">
-                    <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Echipament de diagnostic">
+                    <img src="tratament.png" alt="Echipament de diagnostic">
                     <div class="slide-content">
                         <h3>Echipament de ultimă generație</h3>
                         <p>Endoscoape HD și sisteme de evaluare audiologică</p>
@@ -186,7 +575,7 @@
                 
                 <!-- Slide 3 -->
                 <div class="slide fade">
-                    <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Sala de consultații">
+                    <img src="orl.jpg" alt="Sala de consultații">
                     <div class="slide-content">
                         <h3>Sala de consultații</h3>
                         <p>Consult în condiții de maximă igienă și confort</p>
@@ -195,12 +584,32 @@
                 
                 <!-- Slide 4 -->
                 <div class="slide fade">
-                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Sala de așteptare">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Echipă medicală prietenoasă">
                     <div class="slide-content">
-                        <h3>Sala de așteptare</h3>
-                        <p>Spațiu relaxant pentru pacienți și însoțitori</p>
+                        <h3>Echipă medicală prietenoasă</h3>
+                        <p>Asigură un spațiu relaxant pentru pacienți și însoțitori</p>
                     </div>
                 </div>
+
+<!-- Slide 5 -->
+                <div class="slide fade">
+                    <img src="specialist.png" alt="Medici de încredere">
+                    <div class="slide-content">
+                        <h3>Medici de încredere</h3>
+                        <p>Tratamentele potrivite vin de la medicii potriviți</p>
+                    </div>
+                </div>
+
+
+<!-- Slide 6 -->
+                <div class="slide fade">
+                    <img src="specialist2.png" alt="Medici de încredere">
+                    <div class="slide-content">
+                        <h3>Medici de încredere</h3>
+                        <p>Tratamentele potrivite vin de la medicii potriviți</p>
+                    </div>
+                </div>
+
                 
                 <!-- Navigare -->
                 <a class="prev" onclick="plusSlides(-1)">
@@ -217,6 +626,9 @@
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
                 <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+
             </div>
             
             <!-- Thumbnail Gallery -->
@@ -226,15 +638,23 @@
                     <div class="thumbnail-overlay"></div>
                 </div>
                 <div class="thumbnail" onclick="currentSlide(2)">
-                    <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Echipament">
+                    <img src="tratament.png" alt="Tratament">
                     <div class="thumbnail-overlay"></div>
                 </div>
                 <div class="thumbnail" onclick="currentSlide(3)">
-                    <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Consult">
+                    <img src="orl.jpg" alt="Consult">
                     <div class="thumbnail-overlay"></div>
                 </div>
                 <div class="thumbnail" onclick="currentSlide(4)">
                     <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Așteptare">
+                    <div class="thumbnail-overlay"></div>
+                </div>
+<div class="thumbnail" onclick="currentSlide(5)">
+                    <img src="specialist.png" alt="Așteptare">
+                    <div class="thumbnail-overlay"></div>
+                </div>
+<div class="thumbnail" onclick="currentSlide(6)">
+                    <img src="specialist2.png" alt="Așteptare">
                     <div class="thumbnail-overlay"></div>
                 </div>
             </div>
@@ -258,7 +678,7 @@
                         </div>
                         <div class="contact-content">
                             <h3>Locație</h3>
-                            <p><strong>Clinica ORL</strong><br>
+                            <p><strong>Centrul SENSIA</strong><br>
                             Str. Erou Iancu Nicolae 41, Et. 3<br>
                             Voluntari, Ilfov</p>
                         </div>
@@ -292,7 +712,7 @@
                         </div>
                         <div class="contact-content">
                             <h3>Email</h3>
-                            <p>contact@orl-clinica.ro</p>
+                            <p>sensia@centru-orl.ro</p>
                         </div>
                     </div>
                 </div>
@@ -380,8 +800,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3 class="footer-logo">Clinic<span>ORL</span></h3>
-                    <p class="footer-tagline">Diagnosticul corect.<br>Tratamentul potrivit.</p>
+                    <h3 class="footer-logo">Centrul de Excelență ORL<span>  SENSIA</span></h3>
+                    <p class="footer-tagline">Claritate în auz.<br>Libertate în respirație.</p>
                     <div class="footer-social">
                         <a href="#" aria-label="Facebook" class="social-icon">
                             <i class="fab fa-facebook-f"></i>
@@ -412,27 +832,19 @@
                 <div class="footer-col">
                     <h4>Servicii medicale</h4>
                     <ul class="footer-services">
-                        <li><i class="fas fa-check-circle"></i> Consultații ORL</li>
-                        <li><i class="fas fa-check-circle"></i> Endoscopie nazală</li>
-                        <li><i class="fas fa-check-circle"></i> Tratament sforăit</li>
-                        <li><i class="fas fa-check-circle"></i> Evaluare auz</li>
-                        <li><i class="fas fa-check-circle"></i> ORL pediatric</li>
+                        <li><i class="fas fa-check-circle"></i> Departamentul ORL Clinic</li>
+                        <li><i class="fas fa-check-circle"></i> Audiologie și Protezare Auditivă</li>
+                        <li><i class="fas fa-check-circle"></i> Neuro-Otologie</li>
+                        <li><i class="fas fa-check-circle"></i> Chirurgie Ambulatorie</li>
+                        <li><i class="fas fa-check-circle"></i> Logopedie și Reabilitare Vocală</li>
                     </ul>
                 </div>
                 
-                <div class="footer-col">
-                    <h4>Date de contact</h4>
-                    <div class="contact-info-footer">
-                        <p><i class="fas fa-map-marker-alt"></i> <strong>Adresă:</strong><br>Str. Erou Iancu Nicolae 41<br>Voluntari, Ilfov</p>
-                        <p><i class="fas fa-phone"></i> <strong>Telefon:</strong><br>+40 741 021 801</p>
-                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong><br>contact@orl-clinica.ro</p>
-                    </div>
-                </div>
-            </div>
+                           </div>
             
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
-                    <p>&copy; 2023 <strong>ClinicORL</strong> - Cabinet Medical de Otorinolaringologie. Toate drepturile rezervate.</p>
+                    <p>&copy; 2023 <strong>Centrul de Excelență ORL SENSIA</strong> - Cabinet Medical de Otorinolaringologie. Toate drepturile rezervate.</p>
                     <p class="project-note">Proiect realizat pentru scopuri academice - Marketingul serviciilor medicale</p>
                 </div>
             </div>

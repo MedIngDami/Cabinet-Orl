@@ -55,9 +55,32 @@ header {
 
 .logo h1 {
     color: var(--primary-blue);
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: -0.5px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-image {
+    height: 100px; /* sau orice înălțime doriți */
+    width: auto;
+}
+
+/* Dacă ați folosit Varianta 1 */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajustări responsive */
+@media (max-width: 768px) {
+    .logo-image {
+        height: 40px;
+    }
 }
 
 .logo span {
@@ -201,73 +224,484 @@ header {
 }
 
 /* ===== SERVICII MODERN ===== */
-.servicii {
-    padding: 100px 0;
-    background-color: var(--light-blue);
+.servicii-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9ff 0%, #eef2ff 100%);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
 }
 
 .servicii-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
+    margin-bottom: 60px;
 }
 
 .serviciu-card {
-    background: var(--white);
-    padding: 40px 30px;
-    border-radius: var(--border-radius);
-    text-align: center;
-    transition: var(--transition);
-    box-shadow: var(--shadow);
-    border: 1px solid var(--medium-gray);
-    position: relative;
-    overflow: hidden;
-}
-
-.serviciu-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(to right, var(--primary-blue), var(--secondary-blue));
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #4a6fa5;
 }
 
 .serviciu-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card-special {
+    border-left: 4px solid #e74c3c;
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
 }
 
 .serviciu-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 25px;
-    background: linear-gradient(135deg, var(--light-blue), var(--white));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid var(--secondary-blue);
+    font-size: 2.5rem;
+    color: #4a6fa5;
+    margin-bottom: 20px;
 }
 
-.serviciu-icon i {
-    font-size: 2.5rem;
-    color: var(--primary-blue);
+.card-special .serviciu-icon {
+    color: #e74c3c;
 }
 
 .serviciu-card h3 {
-    color: var(--primary-blue);
-    font-size: 1.4rem;
+    color: #2c3e50;
     margin-bottom: 15px;
-    font-weight: 600;
+    font-size: 1.4rem;
 }
 
-.serviciu-card p {
-    color: var(--dark-gray);
-    line-height: 1.6;
+.serviciu-locatie {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.serviciu-subtitle {
+    color: #4a6fa5;
+    font-weight: 600;
+    margin-bottom: 15px;
     font-size: 0.95rem;
 }
+
+.serviciu-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.serviciu-lista li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.serviciu-lista li:last-child {
+    border-bottom: none;
+}
+
+.serviciu-lista li strong {
+    color: #2c3e50;
+}
+
+.serviciu-desc {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.specialitati {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.specialitate {
+    background: #4a6fa5;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.serviciu-beneficiu {
+    color: #27ae60;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.serviciu-beneficiu i {
+    margin-right: 10px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .servicii-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .serviciu-card {
+        padding: 20px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+.preturi-section {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.strategie-preturi {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.strategie-card {
+    background: linear-gradient(135deg, #4a6fa5 0%, #2c3e50 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.strategie-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffd700;
+}
+
+.strategie-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.strategie-highlight {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.modalitati-plata {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.modalitati-plata h4 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.plata-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.plata-option {
+    background: #eef2ff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #4a6fa5;
+    font-weight: 500;
+}
+
+.preturi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.departament-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.departament-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eef2ff;
+}
+
+.departament-header h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.departament-tag {
+    background: #4a6fa5;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.tag-cas {
+    background: #27ae60;
+}
+
+.serviciu-pret {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 10px;
+}
+
+.serviciu-pret.highlight {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    border-left: 4px solid #ff9800;
+}
+
+.serviciu-info h4 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.serviciu-desc {
+    color: #6c757d;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.pret-compare {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.pret-our {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.pret-market {
+    font-size: 0.85rem;
+    color: #6c757d;
+    background: #eef2ff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.pret-package {
+    font-size: 0.85rem;
+    color: #27ae60;
+    font-weight: 500;
+}
+
+.pret-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pret-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.pret-item:last-child {
+    border-bottom: none;
+}
+
+.pret-value {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.pret-range {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.pret-from, .pret-to {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.pret-note {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.card-cas {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border: 2px solid #27ae60;
+}
+
+.cas-content {
+    text-align: center;
+}
+
+.cas-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.cas-info i {
+    font-size: 3rem;
+    color: #27ae60;
+}
+
+.beneficii-cas {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.beneficii-cas h4 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.beneficii-cas ul {
+    list-style: none;
+    padding: 0;
+}
+
+.beneficii-cas li {
+    padding: 8px 0;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.beneficii-cas i {
+    font-size: 1rem;
+    color: #27ae60;
+}
+
+.cas-nota {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #27ae60;
+}
+
+.cas-nota p {
+    margin: 0;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.preturi-nota {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    border-left: 4px solid #4a6fa5;
+}
+
+.nota-icon {
+    font-size: 2rem;
+    color: #4a6fa5;
+    flex-shrink: 0;
+}
+
+.nota-content h4 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.nota-content p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .strategie-preturi {
+        grid-template-columns: 1fr;
+    }
+    
+    .preturi-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .departament-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .plata-options {
+        flex-direction: column;
+    }
+    
+    .preturi-nota {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+
 
 /* ===== MEDICI MODERN ===== */
 .medici {
